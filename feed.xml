@@ -4,7 +4,7 @@
   <id>/</id>
   <title>CodeLive</title>
   <subtitle>CodeLive' github pages.</subtitle>
-  <updated>2022-01-10T14:31:36+08:00</updated>
+  <updated>2022-01-10T15:28:18+08:00</updated>
   <author>
     <name>codelive</name>
     <uri>/</uri>
@@ -17,6 +17,61 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Github Pages搭建过程</title>
+    <link href="/posts/github-pages/" rel="alternate" type="text/html" title="Github Pages搭建过程" />
+    <published>2022-01-10T15:19:00+08:00</published>
+  
+    <updated>2022-01-10T15:19:00+08:00</updated>
+  
+    <id>/posts/github-pages/</id>
+    <content src="/posts/github-pages/" />
+    <author>
+      <name>{"name"=>"codelive", "link"=>"https://github.com/codelive"}</name>
+    </author>
+
+  
+    
+    <category term="github" />
+    
+    <category term="tutorial" />
+    
+    <category term="pages" />
+    
+    <category term="blog" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Github Pages搭建过程
+
+
+  下载安装Ruby, Ruby Gems, Jekyll and Bundler
+
+
+​		访问Ruby下载页面 Downloads (rubyinstaller.org), 选择最新版本  Ruby+Devkit 3.1.0-1 (x64)
+
+
+  
+    访问网站 Jekyll Themes 找到你喜欢的Theme，不用fork直接拉取github源码，比如我喜欢 Chirpy (jekyllthemes.org) , 访问github地址 cotes2020/jekyll-theme-chirpy, 然后clone代码，并且编译运行
+
+    git clone https://github.com/cotes2020/jekyll-theme-chirpy.git mypages
+cd mypages
+bundle
+bundle ex...
+    </summary>
+  
+
+  </entry>
 
 </feed>
 

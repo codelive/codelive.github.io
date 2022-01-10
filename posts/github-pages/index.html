@@ -20,24 +20,40 @@
 
   
 
+    <!-- i18n for `_javascript/utils/timeago.js` -->
+    <meta name="day-prompt" content="天前">
+    <meta name="hour-prompt" content="小时前">
+    <meta name="minute-prompt" content="分钟前">
+    <meta name="justnow-prompt" content="刚刚">
+
+    
+
+    
+
+  
+
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.1" />
-<meta property="og:title" content="404: Page not found" />
+<meta property="og:title" content="Github Pages搭建过程" />
+<meta name="author" content="codelive" />
 <meta property="og:locale" content="zh_CN" />
-<meta name="description" content="CodeLive’ github pages." />
-<meta property="og:description" content="CodeLive’ github pages." />
-<link rel="canonical" href="/404.html" />
-<meta property="og:url" content="/404.html" />
+<meta name="description" content="Github Pages搭建过程" />
+<meta property="og:description" content="Github Pages搭建过程" />
+<link rel="canonical" href="/posts/github-pages/" />
+<meta property="og:url" content="/posts/github-pages/" />
 <meta property="og:site_name" content="CodeLive" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-01-10T15:19:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="404: Page not found" />
+<meta property="twitter:title" content="Github Pages搭建过程" />
 <meta name="twitter:site" content="@mynameisdongfa" />
+<meta name="twitter:creator" content="@codelive" />
 <script type="application/ld+json">
-{"url":"/404.html","@type":"WebPage","description":"CodeLive’ github pages.","headline":"404: Page not found","@context":"https://schema.org"}</script>
+{"datePublished":"2022-01-10T15:19:00+08:00","url":"/posts/github-pages/","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/github-pages/"},"@type":"BlogPosting","author":{"@type":"Person","name":"codelive"},"description":"Github Pages搭建过程","headline":"Github Pages搭建过程","dateModified":"2022-01-10T15:19:00+08:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>404: Page not found | CodeLive
+  <title>Github Pages搭建过程 | CodeLive
   </title>
 
   <!--
@@ -82,6 +98,9 @@
 
 <link rel="stylesheet" href="/assets/css/style.css">
 
+
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.css">
 
 
 
@@ -390,8 +409,12 @@
 
         
 
+      
+
+        
+
           
-            <span>404: Page not found</span>
+            <span>Github Pages搭建过程</span>
           
 
         
@@ -405,7 +428,7 @@
     <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i>
 
     <div id="topbar-title">
-      404: Page not found
+      文章
     </div>
 
     <i id="search-trigger" class="fas fa-search fa-fw"></i>
@@ -438,11 +461,6 @@
 
     
       
-      <h1 class="dynamic-title">
-        404: Page not found
-      </h1>
-      <div class="post-content">
-        
       
         <!--
   Refactor the HTML structure.
@@ -514,17 +532,254 @@
 
 
 
-<div class="lead"><p>抱歉，我们放错了该 URL，或者它指向了不存在的内容。</p>
 
-  <p><a href="/">返回主页</a>尝试再次查找它，或在<a href="/archives">归档页面</a>上搜索它。
-  </p>
+
+<h1 data-toc-skip>Github Pages搭建过程</h1>
+
+<div class="post-meta text-muted">
+
+  <!-- author -->
+  <div>
+    
+    
+
+    
+
+    作者
+    <em>
+      
+        <a href="https://github.com/codelive">codelive</a>
+      
+    </em>
+  </div>
+
+  <div class="d-flex">
+    <div>
+      <!-- published date -->
+      <span>
+        发表于
+        <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/timeago.js
+-->
+
+
+
+
+
+<em class="timeago"
+    date="2022-01-10 15:19:00 +0800"
+    
+      data-toggle="tooltip"
+      data-placement="bottom"
+      title="2022-01-10, 15:19 +0800"
+    >01-10</em>
+
+      </span>
+
+      <!-- lastmod date -->
+      
+
+      <!-- read time -->
+      <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="335 字">
+  <em>1 分钟</em>阅读</span>
+
+
+      <!-- page views -->
+      
+    </div>
+
+  </div> <!-- .d-flex -->
+
+</div> <!-- .post-meta -->
+
+<div class="post-content">
+  <h1 id="github-pages搭建过程">Github Pages搭建过程</h1>
+
+<ul>
+  <li>下载安装<code class="language-plaintext highlighter-rouge">Ruby</code>, <code class="language-plaintext highlighter-rouge">Ruby Gems</code>, <code class="language-plaintext highlighter-rouge">Jekyll</code> and <code class="language-plaintext highlighter-rouge">Bundler</code></li>
+</ul>
+
+<p>​		访问Ruby下载页面 <a href="https://rubyinstaller.org/downloads/">Downloads (rubyinstaller.org)</a>, 选择最新版本  <a href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.1.0-1/rubyinstaller-devkit-3.1.0-1-x64.exe">Ruby+Devkit 3.1.0-1 (x64)</a></p>
+
+<ul>
+  <li>
+    <p>访问网站 <a href="http://jekyllthemes.org/">Jekyll Themes</a> 找到你喜欢的Theme，不用fork直接拉取github源码，比如我喜欢 <a href="http://jekyllthemes.org/themes/jekyll-theme-chirpy/">Chirpy (jekyllthemes.org)</a> , 访问github地址 <a href="https://github.com/cotes2020/jekyll-theme-chirpy/">cotes2020/jekyll-theme-chirpy</a>, 然后clone代码，并且编译运行</p>
+
+    <div class="language-shell highlighter-rouge"><div class="code-header">
+        <span label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>git clone https://github.com/cotes2020/jekyll-theme-chirpy.git mypages
+<span class="nb">cd </span>mypages
+bundle
+bundle <span class="nb">exec </span>jekyll serve
+</pre></td></tr></tbody></table></code></div>    </div>
+
+    <p>一切顺利后，在浏览器中访问 <a href="http://localhost:4000/">http://localhost:4000</a> 查看结果</p>
+  </li>
+  <li>
+    <p>创建自己的站点，命名为 &lt;your github username&gt;.github.io,比如我的username是 <code class="language-plaintext highlighter-rouge">codelive</code>, 创建新的repository, 命名为: <code class="language-plaintext highlighter-rouge">codelive.github.io</code>, 然后直接拉取空的repository到本地</p>
+
+    <div class="language-shell highlighter-rouge"><div class="code-header">
+        <span label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>git clone https://github.com/codelive/codelive.github.io.git
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>
+    <p>回到刚才的mypages目录，使用jekyll build构建输出</p>
+
+    <div class="language-shell highlighter-rouge"><div class="code-header">
+        <span label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>bundle <span class="nb">exec </span>jekyll build
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+</ul>
+
+<p>​		缺省输出是当前目录下 <code class="language-plaintext highlighter-rouge">_site</code> 目录</p>
+
+<ul>
+  <li>
+    <p>复制_site下面的所有文件到clone的codelive.github.io目录，然后增加所有文件到仓库，commit &amp; push</p>
+
+    <div class="language-shell highlighter-rouge"><div class="code-header">
+        <span label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="nb">cd </span>codelive.github.io
+git add <span class="nb">.</span>
+git commit <span class="nt">-m</span> <span class="s2">"my first pages"</span>
+git.exe push <span class="nt">--progress</span> <span class="s2">"origin"</span> main:main
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>
+    <p>过一会就可以通过 https://codelive.github.io访问你的站点了</p>
+  </li>
+  <li>
+    <p>回到myages下面，编辑 <code class="language-plaintext highlighter-rouge">_config.yml</code>文件，进行一些配置，再重新build-&gt;copy-&gt;commit &amp; push</p>
+  </li>
+</ul>
+
+<p>​</p>
+
+<p>​	之前使用fork的方法，并通过github actions来自动构建总是有问题，后来改用这种方法就没有问题了。</p>
 
 </div>
+
+<div class="post-tail-wrapper text-muted">
+
+  <!-- categories -->
+  
+  <div class="post-meta mb-3">
+    <i class="far fa-folder-open fa-fw mr-1"></i>
+    
+      <a href='/categories/github/'>github</a>,
+      <a href='/categories/tutorial/'>tutorial</a>,
+      <a href='/categories/pages/'>pages</a>,
+      <a href='/categories/blog/'>blog</a>
+  </div>
+  
+
+  <!-- tags -->
+  
+  <div class="post-tags">
+    <i class="fa fa-tags fa-fw mr-1"></i>
+      
+      <a href="/tags/github/"
+          class="post-tag no-text-decoration" >github</a>
+      
+  </div>
+  
+
+  <div class="post-tail-bottom
+    d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
+    <div class="license-wrapper">
+
+      
+
+        
+
+        本文由作者按照 
+        <a href="https://creativecommons.org/licenses/by/4.0/">
+          CC BY 4.0
+        </a>
+         进行授权
+
+      
+    </div>
+
+    <!--
+ Post sharing snippet
+-->
+
+<div class="share-wrapper">
+  <span class="share-label text-muted mr-1">分享</span>
+  <span class="share-icons">
+    
+    
+
+    
+      
+        <a href="https://twitter.com/intent/tweet?text=Github Pages搭建过程 - CodeLive&url=/posts/github-pages/" data-toggle="tooltip" data-placement="top"
+          title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
+          <i class="fa-fw fab fa-twitter"></i>
+        </a>
+    
+      
+        <a href="https://www.facebook.com/sharer/sharer.php?title=Github Pages搭建过程 - CodeLive&u=/posts/github-pages/" data-toggle="tooltip" data-placement="top"
+          title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
+          <i class="fa-fw fab fa-facebook-square"></i>
+        </a>
+    
+      
+        <a href="https://telegram.me/share?text=Github Pages搭建过程 - CodeLive&url=/posts/github-pages/" data-toggle="tooltip" data-placement="top"
+          title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
+          <i class="fa-fw fab fa-telegram"></i>
+        </a>
+    
+
+    <i id="copy-link" class="fa-fw fas fa-link small"
+        data-toggle="tooltip" data-placement="top"
+        title="分享链接"
+        title-succeed="链接已复制！">
+    </i>
+
+  </span>
+</div>
+
+
+  </div><!-- .post-tail-bottom -->
+
+</div><!-- div.post-tail-wrapper -->
 
 
       
     
-      </div>
     
 
     </div>
@@ -593,11 +848,101 @@
     </div>
 
     
+      
+      
+
+
+
+
+    
   </div>
 
 </div>
 
 <!-- tail -->
+
+<div class="row">
+  <div class="col-12 col-lg-11 col-xl-8">
+    <div id="tail-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
+      
+        
+        <!--
+ Recommend the other 3 posts according to the tags and categories of the current post,
+ if the number is not enough, use the other latest posts to supplement.
+-->
+
+<!-- The total size of related posts  -->
+
+
+<!-- An random integer that bigger than 0  -->
+
+
+<!-- Equals to TAG_SCORE / {max_categories_hierarchy}  -->
+
+
+
+
+
+
+
+
+  
+
+  
+    
+
+
+
+
+
+
+<!-- Fill with the other newlest posts  -->
+
+
+
+
+  
+    
+    
+  
+
+
+
+
+
+
+      
+        
+        <!--
+  Navigation buttons at the bottom of the post.
+-->
+
+<div class="post-navigation d-flex justify-content-between">
+  
+  <span class="btn btn-outline-primary disabled"
+    prompt="上一篇">
+    <p>-</p>
+  </span>
+  
+
+  
+  <span class="btn btn-outline-primary disabled"
+    prompt="下一篇">
+    <p>-</p>
+  </span>
+  
+
+</div>
+
+      
+        
+        <!--  The comments switcher -->
+
+
+      
+    </div>
+  </div>
+</div> <!-- .row -->
 
 
 
@@ -747,6 +1092,8 @@ SimpleJekyllSearch({
 <!-- layout specified -->
 
 
+  
+
 
 
   <!-- image lazy-loading & popup -->
@@ -756,7 +1103,7 @@ SimpleJekyllSearch({
 
 
 
-<script defer src="/assets/js/dist/page.min.js"></script>
+<script defer src="/assets/js/dist/post.min.js"></script>
 
 
 

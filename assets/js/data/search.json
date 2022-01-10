@@ -1,4 +1,19 @@
 [
   
+  {
+    "title": "Github Pages搭建过程",
+    "url": "/posts/github-pages/",
+    "categories": "github, tutorial, pages, blog",
+    "tags": "github",
+    "date": "2022-01-10 15:19:00 +0800",
+    
+
+
+
+
+
+    "snippet": "Github Pages搭建过程  下载安装Ruby, Ruby Gems, Jekyll and Bundler​		访问Ruby下载页面 Downloads (rubyinstaller.org), 选择最新版本  Ruby+Devkit 3.1.0-1 (x64)      访问网站 Jekyll Themes 找到你喜欢的Theme，不用fork直接拉取github源码，比如我喜欢 Chirpy (jekyllthemes.org) , 访问github地址 cotes2020/jekyll-theme-chirpy, 然后clone代码，并且编译运行    git clone https://github.com/cotes2020/jekyll-theme-chirpy.git mypagescd mypagesbundlebundle exec jekyll serve        一切顺利后，在浏览器中访问 http://localhost:4000 查看结果        创建自己的站点，命名为 &amp;lt;your github username&amp;gt;.github.io,比如我的username是 codelive, 创建新的repository, 命名为: codelive.github.io, 然后直接拉取空的repository到本地    git clone https://github.com/codelive/codelive.github.io.git            回到刚才的mypages目录，使用jekyll build构建输出    bundle exec jekyll build      ​		缺省输出是当前目录下 _site 目录      复制_site下面的所有文件到clone的codelive.github.io目录，然后增加所有文件到仓库，commit &amp;amp; push    cd codelive.github.iogit add .git commit -m &quot;my first pages&quot;git.exe push --progress &quot;origin&quot; main:main            过一会就可以通过 https://codelive.github.io访问你的站点了        回到myages下面，编辑 _config.yml文件，进行一些配置，再重新build-&amp;gt;copy-&amp;gt;commit &amp;amp; push  ​​	之前使用fork的方法，并通过github actions来自动构建总是有问题，后来改用这种方法就没有问题了。"
+  }
+  
 ]
 
